@@ -29,7 +29,9 @@ class GridViewScreen extends StatelessWidget {
         scrollDirection: Axis.vertical,
         padding: const EdgeInsets.all(12),
         itemBuilder: (context, index) {
-          return _itemsWidget(index);
+          return SizedBox(
+            child: _itemsWidget(index),
+          );
         },
         separatorBuilder: (context, index){
           return const Divider(
@@ -41,6 +43,8 @@ class GridViewScreen extends StatelessWidget {
         itemCount: images.length,
       ),
     );
+
+    //guigui7tuiyguy8
   }
 
   _itemsWidget(int index) {
