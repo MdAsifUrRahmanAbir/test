@@ -14,11 +14,13 @@ dependencies:
 
 
   cupertino_icons: ^1.0.2
+  get:
   fluttertoast: ^8.2.2
 #  unity ad implement
-  unity_ads_plugin: ^0.3.8
-  get:
+#  unity_ads_plugin: ^0.3.8
+#  get:
   flutter_svg: ^2.0.7
+  unity_ads_plugin:
 
 dev_dependencies:
   flutter_test:
