@@ -17,6 +17,7 @@ dependencies:
   fluttertoast: ^8.2.2
   unity_ads_plugin: ^0.3.8
   flutter_svg: ^2.0.7
+  get:
 
 dev_dependencies:
   flutter_test:
