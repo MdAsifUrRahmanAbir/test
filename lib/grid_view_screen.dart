@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 // ignore: must_be_immutable
-class GridViewScreen extends StatelessWidget {
-  GridViewScreen({super.key});
+class GridViewPages extends StatelessWidget {
+  GridViewPages({super.key});
 
   List images = [
     "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=2000",
