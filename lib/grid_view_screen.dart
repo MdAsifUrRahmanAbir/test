@@ -2,9 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 // ignore: must_be_immutable
-class GridViewScreen extends StatelessWidget {
+class GridViewScreen extends StatefulWidget {
   GridViewScreen({super.key});
 
+  @override
+  State<GridViewScreen> createState() => _GridViewScreenState();
+}
+
+class _GridViewScreenState extends State<GridViewScreen> {
   List images = [
     "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=2000",
     "https://media.istockphoto.com/id/1433211776/photo/woman-silhouette-in-front-of-the-ocean-at-sunset.webp?b=1&s=170667a&w=0&k=20&c=xGzw_4wTjK0uKJLS42lR7xPsD7tGRTrx-mWBl0ylih4=",
@@ -44,49 +49,4 @@ class GridViewScreen extends StatelessWidget {
 
     //guigui7tuiyguy8
   }
-
-  // _itemsWidget(int index) {
-  //   return SizedBox(
-  //     height: 210,
-  //     child: Card(
-  //           color: Colors.orangeAccent.shade100,
-  //           child: Stack(
-  //             children: [
-  //               Image.network(
-  //                 images[index],
-  //                 height: double.infinity,
-  //                 width: double.infinity,
-  //                 fit: BoxFit.fill,
-  //               ),
-  //
-  //               Positioned(
-  //                 bottom: 10,
-  //                 left: 10,
-  //                 right: 10,
-  //                 child: Container(
-  //                   color: Colors.white.withOpacity(.5),
-  //                   child: const Row(
-  //                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //                     children: [
-  //                       Icon(Icons.favorite),
-  //
-  //                       Icon(Icons.download_for_offline_outlined)
-  //                     ],
-  //                   ),
-  //                 ),
-  //               ),
-  //
-  //               Positioned(
-  //                 top: 10,
-  //                 right: 10,
-  //                 child: SvgPicture.asset(
-  //                   "assets/circle-heat-svgrepo-com.svg",
-  //                 ),
-  //               )
-  //
-  //             ],
-  //           ),
-  //         ),
-  //   );
-  // }
 }
