@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 // ignore: must_be_immutable
-class GridViewScreen extends StatelessWidget {
-  GridViewScreen({super.key});
+class GridViewPages extends StatelessWidget {
+  GridViewPages({super.key});
 
   List images = [
     "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=2000",
@@ -29,7 +29,9 @@ class GridViewScreen extends StatelessWidget {
         scrollDirection: Axis.vertical,
         padding: const EdgeInsets.all(12),
         itemBuilder: (context, index) {
-          return SizedBox();
+          return SizedBox(
+            child: _itemsWidget(index),
+          );
         },
         separatorBuilder: (context, index){
           return const Divider(
@@ -45,48 +47,48 @@ class GridViewScreen extends StatelessWidget {
     //guigui7tuiyguy8
   }
 
-  // _itemsWidget(int index) {
-  //   return SizedBox(
-  //     height: 210,
-  //     child: Card(
-  //           color: Colors.orangeAccent.shade100,
-  //           child: Stack(
-  //             children: [
-  //               Image.network(
-  //                 images[index],
-  //                 height: double.infinity,
-  //                 width: double.infinity,
-  //                 fit: BoxFit.fill,
-  //               ),
-  //
-  //               Positioned(
-  //                 bottom: 10,
-  //                 left: 10,
-  //                 right: 10,
-  //                 child: Container(
-  //                   color: Colors.white.withOpacity(.5),
-  //                   child: const Row(
-  //                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //                     children: [
-  //                       Icon(Icons.favorite),
-  //
-  //                       Icon(Icons.download_for_offline_outlined)
-  //                     ],
-  //                   ),
-  //                 ),
-  //               ),
-  //
-  //               Positioned(
-  //                 top: 10,
-  //                 right: 10,
-  //                 child: SvgPicture.asset(
-  //                   "assets/circle-heat-svgrepo-com.svg",
-  //                 ),
-  //               )
-  //
-  //             ],
-  //           ),
-  //         ),
-  //   );
-  // }
+  _itemsWidget(int index) {
+    return SizedBox(
+      height: 210,
+      child: Card(
+            color: Colors.orangeAccent.shade100,
+            child: Stack(
+              children: [
+                Image.network(
+                  images[index],
+                  height: double.infinity,
+                  width: double.infinity,
+                  fit: BoxFit.fill,
+                ),
+
+                Positioned(
+                  bottom: 10,
+                  left: 10,
+                  right: 10,
+                  child: Container(
+                    color: Colors.white.withOpacity(.5),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Icon(Icons.favorite),
+
+                        Icon(Icons.download_for_offline_outlined)
+                      ],
+                    ),
+                  ),
+                ),
+
+                Positioned(
+                  top: 10,
+                  right: 10,
+                  child: SvgPicture.asset(
+                    "assets/circle-heat-svgrepo-com.svg",
+                  ),
+                )
+
+              ],
+            ),
+          ),
+    );
+  }
 }
