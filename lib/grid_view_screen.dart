@@ -29,7 +29,7 @@ class GridViewScreen extends StatelessWidget {
         scrollDirection: Axis.vertical,
         padding: const EdgeInsets.all(12),
         itemBuilder: (context, index) {
-          return _itemsWidget(index);
+          return SizedBox();
         },
         separatorBuilder: (context, index){
           return const Divider(
@@ -45,48 +45,48 @@ class GridViewScreen extends StatelessWidget {
     //guigui7tuiyguy8
   }
 
-  _itemsWidget(int index) {
-    return SizedBox(
-      height: 210,
-      child: Card(
-            color: Colors.orangeAccent.shade100,
-            child: Stack(
-              children: [
-                Image.network(
-                  images[index],
-                  height: double.infinity,
-                  width: double.infinity,
-                  fit: BoxFit.fill,
-                ),
-
-                Positioned(
-                  bottom: 10,
-                  left: 10,
-                  right: 10,
-                  child: Container(
-                    color: Colors.white.withOpacity(.5),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Icon(Icons.favorite),
-
-                        Icon(Icons.download_for_offline_outlined)
-                      ],
-                    ),
-                  ),
-                ),
-
-                Positioned(
-                  top: 10,
-                  right: 10,
-                  child: SvgPicture.asset(
-                    "assets/circle-heat-svgrepo-com.svg",
-                  ),
-                )
-
-              ],
-            ),
-          ),
-    );
-  }
+  // _itemsWidget(int index) {
+  //   return SizedBox(
+  //     height: 210,
+  //     child: Card(
+  //           color: Colors.orangeAccent.shade100,
+  //           child: Stack(
+  //             children: [
+  //               Image.network(
+  //                 images[index],
+  //                 height: double.infinity,
+  //                 width: double.infinity,
+  //                 fit: BoxFit.fill,
+  //               ),
+  //
+  //               Positioned(
+  //                 bottom: 10,
+  //                 left: 10,
+  //                 right: 10,
+  //                 child: Container(
+  //                   color: Colors.white.withOpacity(.5),
+  //                   child: const Row(
+  //                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  //                     children: [
+  //                       Icon(Icons.favorite),
+  //
+  //                       Icon(Icons.download_for_offline_outlined)
+  //                     ],
+  //                   ),
+  //                 ),
+  //               ),
+  //
+  //               Positioned(
+  //                 top: 10,
+  //                 right: 10,
+  //                 child: SvgPicture.asset(
+  //                   "assets/circle-heat-svgrepo-com.svg",
+  //                 ),
+  //               )
+  //
+  //             ],
+  //           ),
+  //         ),
+  //   );
+  // }
 }
